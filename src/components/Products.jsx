@@ -10,7 +10,7 @@ import fruitProtectionBagsImage from '/Users/ggowda/CascadeProjects/windsurf-pro
 function Products() {
   const nurseryProducts = [
     {
-      name: 'Taiwan Red Diamond',
+      name: 'Japanese Red Diamond',
       image: redDiamondImage,
       description: 'Premium quality guava variety with exceptional sweetness'
     },
