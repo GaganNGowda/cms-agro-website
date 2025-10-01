@@ -1,0 +1,210 @@
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-green) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 80px;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+.hero-text {
+  color: var(--white);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: var(--accent-yellow);
+  position: relative;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--accent-yellow);
+  color: var(--text-dark);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 217, 61, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+  background: var(--white);
+  color: var(--primary-teal);
+}
+
+.hero-image {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-main-image {
+  max-width: 350px;
+  max-height: 350px;
+  object-fit: contain;
+  z-index: 1;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+.floating-card {
+  position: absolute;
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.floating-card .icon {
+  font-size: 2rem;
+}
+
+.floating-card p {
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.card-1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.card-2 {
+  top: 50%;
+  right: 10%;
+  animation-delay: 1s;
+}
+
+.card-3 {
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.hero-wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px;
+}
+
+.hero-wave path {
+  fill: var(--white);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 100px 0 80px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    height: 300px;
+    margin-top: 2rem;
+  }
+
+  .floating-card {
+    padding: 1rem;
+  }
+
+  .floating-card .icon {
+    font-size: 1.5rem;
+  }
+
+  .floating-card p {
+    font-size: 0.9rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    text-align: center;
+  }
+}
