@@ -20,14 +20,14 @@
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 1.5rem;
-  font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.footer-logo .logo-icon {
-  font-size: 2rem;
+.footer-logo-image {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .footer-description {

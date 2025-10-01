@@ -1,4 +1,5 @@
 import './Footer.css';
+import logoImage from './images/Png-04.png';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,8 +10,7 @@ function Footer() {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <div className="logo-icon">🌱</div>
-              <span className="logo-text">CMS Agro</span>
+              <img src={logoImage} alt="CMS Agro" className="footer-logo-image" />
             </div>
             <p className="footer-description">
               Empowering farmers with premium plants and complete harvest protection solutions for over 12 years.

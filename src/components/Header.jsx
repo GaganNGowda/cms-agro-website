@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Header.css';
+import logoImage from './images/Png-04.png';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,8 +22,7 @@ function Header() {
       <div className="container">
         <nav className="nav">
           <div className="logo">
-            <div className="logo-icon">🌱</div>
-            <span className="logo-text">CMS Agro</span>
+            <img src={logoImage} alt="CMS Agro" className="logo-image" />
           </div>
           
           <button className={`menu-toggle ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>

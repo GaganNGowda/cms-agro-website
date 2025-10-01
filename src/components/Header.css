@@ -18,18 +18,13 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--primary-teal);
 }
 
-.logo-icon {
-  font-size: 2rem;
-}
-
-.logo-text {
-  font-size: 1.5rem;
+.logo-image {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 .nav-links {

@@ -1,9 +1,11 @@
 import './Products.css';
 import redDiamondImage from './images/online-plant-bazar-red-diamon-guava-live-plant-pack-of-1-product-images-orvibmh56v2-p596290407-1-202212121239.webp';
+import litePink from '/Users/ggowda/CascadeProjects/windsurf-project/cms-agro-website/src/components/images/61um6wnOgGL.webp'
 import whiteGuavaImage from './images/White-Guava-1.webp';
 import weedMatImage from './images/71STIr-MRNL.webp';
-import protectionBagImage from './images/61aY8N16cCL.webp';
-import foamNetImage from './images/H70560c8e0bd6435bb7fbbcea81fafac40.webp';
+import mangoBags from './images/H70560c8e0bd6435bb7fbbcea81fafac40.webp';
+import foamNetImage from '/Users/ggowda/CascadeProjects/windsurf-project/cms-agro-website/src/components/images/H266a8445d25e42d38c8cfce35368d69aC.jpg_300x300.webp';
+import fruitProtectionBagsImage from '/Users/ggowda/CascadeProjects/windsurf-project/cms-agro-website/src/components/images/Gemini_Generated_Image_7vf72n7vf72n7vf7.png';
 
 function Products() {
   const nurseryProducts = [
@@ -14,7 +16,7 @@ function Products() {
     },
     {
       name: 'Taiwan Gold (Lite Pink)',
-      image: redDiamondImage,
+      image: litePink,
       description: 'Light pink variety known for superior taste'
     },
     {
@@ -27,17 +29,22 @@ function Products() {
   const protectionProducts = [
     {
       name: 'Weed Mats',
-      icon: '🛡️',
+      image: weedMatImage,
       description: 'The Ultimate Weed Barrier: 100 GSM / other GSM and sizes'
     },
     {
       name: 'Fruit Protection Bags',
-      icon: '🎒',
+      image: mangoBags,
       description: 'Mango Protection Bags - Available in multiple colors'
+    },
+     {
+      name: 'Fruit protection bags',
+      image: fruitProtectionBagsImage,
+      description: 'Wax-Coated Paper Bags – Reliable Protection for Pomegranate, Guava, Grapes, Custard Apple & Beyond'
     },
     {
       name: 'EPE Fruit Foam Nets',
-      icon: '🥅',
+      image: foamNetImage,
       description: 'Available in multiple sizes and colors for all fruits'
     }
   ];
@@ -61,7 +68,9 @@ function Products() {
             <div className="product-cards">
               {nurseryProducts.map((product, index) => (
                 <div key={index} className="product-card">
-                  <div className="product-icon">{product.icon}</div>
+                  <div className="product-image-container">
+                    <img src={product.image} alt={product.name} className="product-image" />
+                  </div>
                   <h4 className="product-name">{product.name}</h4>
                   <p className="product-description">{product.description}</p>
                 </div>
@@ -82,7 +91,9 @@ function Products() {
             <div className="product-cards">
               {protectionProducts.map((product, index) => (
                 <div key={index} className="product-card">
-                  <div className="product-icon">{product.icon}</div>
+                  <div className="product-image-container">
+                    <img src={product.image} alt={product.name} className="product-image" />
+                  </div>
                   <h4 className="product-name">{product.name}</h4>
                   <p className="product-description">{product.description}</p>
                 </div>

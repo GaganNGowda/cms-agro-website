@@ -1,5 +1,4 @@
 import './Hero.css';
-import fruitBagImage from './images/Gemini_Generated_Image_7vf72n7vf72n7vf7.png';
 
 function Hero() {
   return (
@@ -18,7 +17,7 @@ function Hero() {
           </div>
         </div>
         <div className="hero-image">
-          <img src={fruitBagImage} alt="CMS Agro Fresh Products" className="hero-main-image" />
+          {/* <img src={fruitBagImage} alt="CMS Agro Fresh Products" className="hero-main-image" /> */}
           <div className="floating-card card-1">
             <span className="icon">🌱</span>
             <p>Premium Plants</p>

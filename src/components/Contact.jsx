@@ -1,4 +1,5 @@
 import './Contact.css';
+import qrCodeImage from './images/cmslocation (2).png';
 
 function Contact() {
   return (
@@ -52,8 +53,8 @@ function Contact() {
             </div>
 
             <div className="qr-section">
-              <div className="qr-placeholder">
-                <div className="qr-icon">📱</div>
+              <div className="qr-container">
+                <img src={qrCodeImage} alt="Scan for Location" className="qr-code" />
                 <p>Scan for Location</p>
               </div>
             </div>
