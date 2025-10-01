@@ -1,0 +1,304 @@
+.about-page {
+  padding-top: 70px;
+}
+
+.about-hero {
+  background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-green) 100%);
+  padding: 100px 0 80px;
+  text-align: center;
+  color: var(--white);
+}
+
+.page-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.page-subtitle {
+  font-size: 1.5rem;
+  opacity: 0.95;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Story Section */
+.story-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.story-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.story-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Mission Vision */
+.mission-vision {
+  background: var(--light-bg);
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.mv-card {
+  background: var(--white);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.mv-card:hover {
+  transform: translateY(-10px);
+}
+
+.mv-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.mv-card h3 {
+  color: var(--primary-teal);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.mv-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Achievements */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.achievement-card {
+  background: linear-gradient(135deg, var(--primary-teal), var(--primary-green));
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  color: var(--white);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.achievement-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--accent-yellow);
+}
+
+.achievement-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.achievement-card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Farm Footprint */
+.farm-footprint {
+  background: var(--light-bg);
+}
+
+.footprint-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.footprint-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.footprint-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.footprint-list li {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  padding: 0.8rem 0;
+  font-weight: 500;
+}
+
+.footprint-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.footprint-images img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Partnership */
+.partnership-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.partnership-image img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.partnership-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.partnership-cta {
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background: var(--primary-teal);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--primary-green);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(127, 176, 105, 0.4);
+}
+
+/* Why Choose */
+.why-choose {
+  background: var(--light-bg);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.why-card {
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.why-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.why-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.why-card h3 {
+  color: var(--primary-teal);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.why-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .story-content,
+  .footprint-content,
+  .partnership-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .mv-grid,
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .mv-grid,
+  .achievements-grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero {
+    padding: 80px 0 60px;
+  }
+}

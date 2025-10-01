@@ -3,37 +3,41 @@ import nurseryImage from './images/WhatsApp Image 2025-09-30 at 23.27.20.jpeg';
 import farmVisitImage from './images/WhatsApp Image 2025-10-01 at 00.10.10.jpeg';
 import plantingImage from './images/WhatsApp Image 2025-10-01 at 00.10.11.jpeg';
 import eventImage from './images/WhatsApp Image 2025-10-01 at 00.10.11 (2).jpeg';
+import { useLanguage } from '../context/LanguageContext';
+import { getTranslation } from '../translations/translations';
 
 function About() {
+  const { language } = useLanguage();
+  
   return (
     <section id="about" className="about section">
       <div className="container">
         <div className="about-content">
           <div className="about-text">
-            <h2 className="section-title">About Us</h2>
+            <h2 className="section-title">{getTranslation(language, 'about.title')}</h2>
             <div className="about-description">
               <p>
-                At <strong>Samrudhi Nursery & CMS Agro</strong>, our roots run deep. For 12 years, we have been dedicated to enhancing agricultural productivity and delivering quality, specializing in a complete farm-to-market ecosystem.
+                {getTranslation(language, 'about.intro')}
               </p>
               
               <div className="highlight-box">
-                <h3>🌳 Our Farm Footprint</h3>
+                <h3>🌳 {getTranslation(language, 'about.farmFootprint')}</h3>
                 <p>
-                  We are not just suppliers; we are growers. We actively manage over 10 acres of high-yield guava and 5 acres of mango, along with other diverse fruit cultivations. This hands-on experience has made us a recognized leader and one of the largest commercial guava harvesters in Karnataka.
+                  {getTranslation(language, 'about.farmFootprintDesc')}
                 </p>
               </div>
 
               <div className="highlight-box">
-                <h3>🤝 A Partnership in Growth</h3>
+                <h3>🤝 {getTranslation(language, 'about.partnership')}</h3>
                 <p>
-                  Our mission is to empower farmers. Through the Samrudhi Nursery, we have successfully supplied over <strong>500,000 top-quality plants</strong> (including our Red Diamond, Taiwan Light Pink, and Taiwan White guava varieties) and have provided dedicated 1-year growth guidance and support to a network of over <strong>5,500 farmers</strong>.
+                  {getTranslation(language, 'about.partnershipDesc')}
                 </p>
               </div>
 
               <div className="highlight-box">
-                <h3>💼 Your Success is Our Priority</h3>
+                <h3>💼 {getTranslation(language, 'about.success')}</h3>
                 <p>
-                  When you work with us, you leverage our expertise as both a large-scale grower and a committed supplier, ensuring your success is our priority.
+                  {getTranslation(language, 'about.successDesc')}
                 </p>
               </div>
             </div>
@@ -51,19 +55,19 @@ function About() {
           <div className="about-stats">
             <div className="stat-card">
               <div className="stat-number">12+</div>
-              <div className="stat-label">Years of Experience</div>
+              <div className="stat-label">{getTranslation(language, 'about.yearsExperience')}</div>
             </div>
             <div className="stat-card">
               <div className="stat-number">500K+</div>
-              <div className="stat-label">Plants Supplied</div>
+              <div className="stat-label">{getTranslation(language, 'about.plantsSupplied')}</div>
             </div>
             <div className="stat-card">
               <div className="stat-number">5,500+</div>
-              <div className="stat-label">Farmers Supported</div>
+              <div className="stat-label">{getTranslation(language, 'about.farmersSupported')}</div>
             </div>
             <div className="stat-card">
               <div className="stat-number">15+</div>
-              <div className="stat-label">Acres Managed</div>
+              <div className="stat-label">{getTranslation(language, 'about.acresManaged')}</div>
             </div>
           </div>
         </div>

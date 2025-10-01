@@ -1,8 +1,12 @@
 import './Footer.css';
 import logoImage from './images/Png-04.png';
+import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
+import { getTranslation } from '../translations/translations';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
+  const { language } = useLanguage();
 
   return (
     <footer className="footer">
@@ -13,44 +17,44 @@ function Footer() {
               <img src={logoImage} alt="CMS Agro" className="footer-logo-image" />
             </div>
             <p className="footer-description">
-              Empowering farmers with premium plants and complete harvest protection solutions for over 12 years.
+              {getTranslation(language, 'footer.description')}
             </p>
           </div>
 
           <div className="footer-section">
-            <h4>Quick Links</h4>
+            <h4>{getTranslation(language, 'footer.quickLinks')}</h4>
             <ul className="footer-links">
-              <li><a href="#hero">Home</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#products">Products</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><Link to="/">{getTranslation(language, 'nav.home')}</Link></li>
+              <li><Link to="/about">{getTranslation(language, 'nav.about')}</Link></li>
+              <li><Link to="/products">{getTranslation(language, 'nav.products')}</Link></li>
+              <li><Link to="/contact">{getTranslation(language, 'nav.contact')}</Link></li>
             </ul>
           </div>
 
           <div className="footer-section">
-            <h4>Our Products</h4>
+            <h4>{getTranslation(language, 'footer.ourProducts')}</h4>
             <ul className="footer-links">
-              <li>Premium Guava Plants</li>
-              <li>Weed Mats</li>
-              <li>Fruit Protection Bags</li>
-              <li>EPE Fruit Foam Nets</li>
+              <li>{getTranslation(language, 'products.nurserySubtitle')}</li>
+              <li>{getTranslation(language, 'products.weedMats')}</li>
+              <li>{getTranslation(language, 'products.fruitBags')}</li>
+              <li>{getTranslation(language, 'products.foamNets')}</li>
             </ul>
           </div>
 
           <div className="footer-section">
-            <h4>Contact Info</h4>
+            <h4>{getTranslation(language, 'footer.contactInfo')}</h4>
             <ul className="footer-links">
               <li>📧 cmsagrofresh@gmail.com</li>
               <li>📱 +91 979-6656-979</li>
               <li>🌐 www.cmsagrofresh.com</li>
-              <li>📍 Karnataka, India</li>
+              <li>📍 {getTranslation(language, 'contact.locationValue')}</li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
           <p>&copy; {currentYear} CMS Agro. All rights reserved.</p>
-          <p className="footer-tagline">The Future of Farming 🌾</p>
+          <p className="footer-tagline">{getTranslation(language, 'footer.tagline')}</p>
         </div>
       </div>
     </footer>

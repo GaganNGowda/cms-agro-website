@@ -40,10 +40,27 @@
   font-weight: 500;
   transition: color 0.3s;
   cursor: pointer;
+  position: relative;
 }
 
 .nav-links li a:hover {
   color: var(--primary-green);
+}
+
+.nav-links li a.active {
+  color: var(--primary-teal);
+  font-weight: 600;
+}
+
+.nav-links li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-green);
+  border-radius: 2px;
 }
 
 .cta-btn {
@@ -58,6 +75,11 @@
 .cta-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(255, 217, 61, 0.4);
+}
+
+.lang-switcher-item {
+  display: flex;
+  align-items: center;
 }
 
 .menu-toggle {

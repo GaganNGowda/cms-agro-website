@@ -1,0 +1,89 @@
+.contact-page {
+  padding-top: 70px;
+}
+
+.contact-hero {
+  background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-green) 100%);
+  padding: 100px 0 80px;
+  text-align: center;
+  color: var(--white);
+}
+
+.contact-cta {
+  background: linear-gradient(135deg, var(--primary-teal), var(--primary-green));
+  color: var(--white);
+}
+
+.cta-box {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-box h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-box p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s;
+  font-size: 1.1rem;
+}
+
+.btn-primary {
+  background: var(--accent-yellow);
+  color: var(--text-dark);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 217, 61, 0.5);
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--primary-teal);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 576px) {
+  .contact-hero {
+    padding: 80px 0 60px;
+  }
+
+  .cta-box h2 {
+    font-size: 2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}

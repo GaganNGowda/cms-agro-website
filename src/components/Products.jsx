@@ -6,46 +6,49 @@ import weedMatImage from './images/71STIr-MRNL.webp';
 import mangoBags from './images/H70560c8e0bd6435bb7fbbcea81fafac40.webp';
 import foamNetImage from '/Users/ggowda/CascadeProjects/windsurf-project/cms-agro-website/src/components/images/H266a8445d25e42d38c8cfce35368d69aC.jpg_300x300.webp';
 import fruitProtectionBagsImage from '/Users/ggowda/CascadeProjects/windsurf-project/cms-agro-website/src/components/images/Gemini_Generated_Image_7vf72n7vf72n7vf7.png';
+import { useLanguage } from '../context/LanguageContext';
+import { getTranslation } from '../translations/translations';
 
 function Products() {
+  const { language } = useLanguage();
   const nurseryProducts = [
     {
-      name: 'Japanese Red Diamond',
+      name: getTranslation(language, 'products.redDiamond'),
       image: redDiamondImage,
-      description: 'Premium quality guava variety with exceptional sweetness'
+      description: getTranslation(language, 'products.redDiamondDesc')
     },
     {
-      name: 'Taiwan Gold (Lite Pink)',
+      name: getTranslation(language, 'products.taiwanGold'),
       image: litePink,
-      description: 'Light pink variety known for superior taste'
+      description: getTranslation(language, 'products.taiwanGoldDesc')
     },
     {
-      name: 'Taiwan White',
+      name: getTranslation(language, 'products.taiwanWhite'),
       image: whiteGuavaImage,
-      description: 'White guava variety with excellent market demand'
+      description: getTranslation(language, 'products.taiwanWhiteDesc')
     }
   ];
 
   const protectionProducts = [
     {
-      name: 'Weed Mats',
+      name: getTranslation(language, 'products.weedMats'),
       image: weedMatImage,
-      description: 'The Ultimate Weed Barrier: 100 GSM / other GSM and sizes'
+      description: getTranslation(language, 'products.weedMatsDesc')
     },
     {
-      name: 'Fruit Protection Bags',
+      name: getTranslation(language, 'products.fruitBags'),
       image: mangoBags,
-      description: 'Mango Protection Bags - Available in multiple colors'
+      description: getTranslation(language, 'products.fruitBagsDesc')
     },
      {
-      name: 'Fruit protection bags',
+      name: getTranslation(language, 'products.waxBags'),
       image: fruitProtectionBagsImage,
-      description: 'Wax-Coated Paper Bags – Reliable Protection for Pomegranate, Guava, Grapes, Custard Apple & Beyond'
+      description: getTranslation(language, 'products.waxBagsDesc')
     },
     {
-      name: 'EPE Fruit Foam Nets',
+      name: getTranslation(language, 'products.foamNets'),
       image: foamNetImage,
-      description: 'Available in multiple sizes and colors for all fruits'
+      description: getTranslation(language, 'products.foamNetsDesc')
     }
   ];
 
@@ -53,17 +56,17 @@ function Products() {
     <section id="products" className="products section">
       <div className="container">
         <div className="products-header">
-          <h2 className="section-title">Our Products</h2>
+          <h2 className="section-title">{getTranslation(language, 'products.title')}</h2>
           <p className="products-subtitle">
-            Complete solutions from nursery to harvest protection
+            {getTranslation(language, 'products.subtitle')}
           </p>
         </div>
 
         <div className="products-grid">
           <div className="product-category">
             <div className="category-header">
-              <h3>🌱 Samrudhi Nursery</h3>
-              <p className="category-subtitle">Premium Guava Plants</p>
+              <h3>🌱 {getTranslation(language, 'products.nurseryTitle')}</h3>
+              <p className="category-subtitle">{getTranslation(language, 'products.nurserySubtitle')}</p>
             </div>
             <div className="product-cards">
               {nurseryProducts.map((product, index) => (
@@ -78,15 +81,15 @@ function Products() {
             </div>
             <div className="category-footer">
               <p className="support-text">
-                ✅ 1-Year Growth Guidance & Support: "We don't just sell plants; we partner in your success. For bulk orders, we provide a full year of complete guidance and expert support until the initial growth cycle is complete."
+                {getTranslation(language, 'products.supportText')}
               </p>
             </div>
           </div>
 
           <div className="product-category">
             <div className="category-header">
-              <h3>🛡️ CMS Agro</h3>
-              <p className="category-subtitle">Harvest Protection Solutions</p>
+              <h3>🛡️ {getTranslation(language, 'products.protectionTitle')}</h3>
+              <p className="category-subtitle">{getTranslation(language, 'products.protectionSubtitle')}</p>
             </div>
             <div className="product-cards">
               {protectionProducts.map((product, index) => (

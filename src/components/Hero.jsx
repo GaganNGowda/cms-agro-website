@@ -1,34 +1,38 @@
 import './Hero.css';
+import { useLanguage } from '../context/LanguageContext';
+import { getTranslation } from '../translations/translations';
 
 function Hero() {
+  const { language } = useLanguage();
+  
   return (
     <section id="hero" className="hero">
       <div className="hero-content">
         <div className="hero-text">
           <h1 className="hero-title">
-            The Future of <span className="highlight">Farming</span>
+            {getTranslation(language, 'hero.title')} <span className="highlight">{getTranslation(language, 'hero.titleHighlight')}</span>
           </h1>
           <p className="hero-subtitle">
-            From premium plants to complete harvest protection, we provide a unified ecosystem for superior yield.
+            {getTranslation(language, 'hero.subtitle')}
           </p>
           <div className="hero-buttons">
-            <a href="#products" className="btn btn-primary">Explore Products</a>
-            <a href="#contact" className="btn btn-secondary">Get in Touch</a>
+            <a href="#products" className="btn btn-primary">{getTranslation(language, 'hero.exploreProducts')}</a>
+            <a href="#contact" className="btn btn-secondary">{getTranslation(language, 'hero.getInTouch')}</a>
           </div>
         </div>
         <div className="hero-image">
           {/* <img src={fruitBagImage} alt="CMS Agro Fresh Products" className="hero-main-image" /> */}
           <div className="floating-card card-1">
             <span className="icon">🌱</span>
-            <p>Premium Plants</p>
+            <p>{getTranslation(language, 'hero.premiumPlants')}</p>
           </div>
           <div className="floating-card card-2">
             <span className="icon">🛡️</span>
-            <p>Harvest Protection</p>
+            <p>{getTranslation(language, 'hero.harvestProtection')}</p>
           </div>
           <div className="floating-card card-3">
             <span className="icon">🌾</span>
-            <p>Superior Yield</p>
+            <p>{getTranslation(language, 'hero.superiorYield')}</p>
           </div>
         </div>
       </div>
@@ -36,7 +40,7 @@ function Hero() {
         <div className="mouse">
           <div className="wheel"></div>
         </div>
-        <p>Scroll Down</p>
+        <p>{getTranslation(language, 'hero.scrollDown')}</p>
       </div>
       
       <div className="hero-wave">
