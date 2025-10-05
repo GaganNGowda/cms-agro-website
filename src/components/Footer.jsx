@@ -46,7 +46,7 @@ function Footer() {
             <ul className="footer-links">
               <li>📧 cmsagrofresh@gmail.com</li>
               <li>📱 +91 979-6656-979</li>
-              <li>🌐 www.cmsagrofresh.com</li>
+              <li>🌐 www.cmsagro.com</li>
               <li>📍 {getTranslation(language, 'contact.locationValue')}</li>
             </ul>
           </div>

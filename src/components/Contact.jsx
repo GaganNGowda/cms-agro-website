@@ -21,8 +21,8 @@ function Contact() {
                 <div className="contact-icon">🌐</div>
                 <div className="contact-text">
                   <h4>{getTranslation(language, 'contact.website')}</h4>
-                  <a href="https://www.cmsagrofresh.com" target="_blank" rel="noopener noreferrer">
-                    www.cmsagrofresh.com
+                  <a href="https://www.cmsagro.com" target="_blank" rel="noopener noreferrer">
+                    www.cmsagro.com
                   </a>
                 </div>
               </div>
